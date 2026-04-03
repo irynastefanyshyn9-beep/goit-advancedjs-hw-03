@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <script type="module" src="./main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Search</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/css-loader/3.3.3/css-loader.min.css">
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <section class="search-section">
+    <form class="form" id="search-form">
+      <input type="text" name="search-text" class="form-input" placeholder="Search images..." required>
+      <button type="submit" class="form-btn">Search</button>
+    </form>
+
+    <div class="loader-container" id="loader">
+      <div class="loader loader-default is-active"></div>
+      <p class="loader-text">Loading images, please wait...</p>
+    </div>
+
+    <ul class="gallery"></ul>
+  </section>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
 </html>
